@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: #444444;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+
+
+
+
+.flexbox-parent
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    background: rgba(255, 255, 255, .1);
+}
+
+.flexbox-item
+{
+    padding: 8px;
+}
+.flexbox-item-grow
+{
+    flex: 1;
+     -webkit-flex:1;
+     border:thin solid #777;
+}
+
+.flexbox-item.header
+{
+    background: rgba(255, 0, 0, .1);
+}
+.flexbox-item.footer
+{
+    background: rgba(0, 255, 0, .1);
+}
+.flexbox-item.content
+{
+    background: rgba(0, 0, 255, .1);
+}
+
+.fill-area
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+
+}
+.fill-area-content
+{
+    display:flex;
+    background:#FFFF20;
+    border: 1px solid #000000;
+    overflow: auto;
+    justify-content:center;
+}
+
+
+
+    #left {
+
+        width:200px;
+        min-height:100%;
+        background:#62C014;
+    }
+    #content {
+
+        width:600px;
+        min-height:100%;
+        background:#FFCC00;
+    }
+    #right {
+
+        width:200px;
+        min-height:100%;
+        background:#62C014;
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="flexbox-parent">
+    <div class="flexbox-item header">
+        <header id="header"> Header</header>
+    </div>
+
+    <div class="flexbox-item fill-area content flexbox-item-grow">
+        <div class="fill-area-content flexbox-item-grow">
+            <div id="left">Left Content</div>
+            <div id="content">Main Content</div>
+            <div id="right">Side Links</div>
+        </div>
+    </div>
+
+    <div class="flexbox-item footer">
+        <footer>
+        <p>Contact information: someone@example.com</p>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
